@@ -9,7 +9,12 @@ function download_if_not_exists() {
   local filename=${url##*/}
   if [ ! -f "${SELF_DIR}/download/$filename" ]; then
     echo "downloading $filename ..."
-    wget -O "${SELF_DIR}/download/$filename" $url
+    wget -t 3 -O "${SELF_DIR}/download/$filename" $url
+    if [ $? -ne 0 ]; then
+      rm "${SELF_DIR}/download/$filename"
+      echo "Error: Failed to download $filename"
+      exit 1;
+    fi
   else
     echo "skip downloading existed $filename"
   fi
