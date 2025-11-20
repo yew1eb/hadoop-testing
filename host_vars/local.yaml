@@ -90,4 +90,4 @@ loki_log4j2_appender_version: 0.9.32
 repository_apache: https://mirrors.cloud.tencent.com/apache
 repository_maven: https://mirrors.cloud.tencent.com/maven
 
-apt_mirror_enabled: true
+apt_mirror_enabled: false
