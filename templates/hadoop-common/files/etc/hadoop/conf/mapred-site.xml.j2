@@ -51,11 +51,23 @@
     <value>HADOOP_MAPRED_HOME=/opt/hadoop,JAVA_HOME=/opt/openjdk-8</value>
   </property>
   <property>
+    <name>yarn.app.mapreduce.am.admin-command-opts</name>
+    <value>-XX:+IgnoreUnrecognizedVMOptions</value>
+  </property>
+  <property>
     <name>mapreduce.map.env</name>
     <value>HADOOP_MAPRED_HOME=/opt/hadoop,JAVA_HOME=/opt/openjdk-8</value>
   </property>
   <property>
+    <name>mapreduce.map.java.opts</name>
+    <value>-XX:+IgnoreUnrecognizedVMOptions</value>
+  </property>
+  <property>
     <name>mapreduce.reduce.env</name>
     <value>HADOOP_MAPRED_HOME=/opt/hadoop,JAVA_HOME=/opt/openjdk-8</value>
+  </property>
+  <property>
+    <name>mapreduce.reduce.java.opts</name>
+    <value>-XX:+IgnoreUnrecognizedVMOptions</value>
   </property>
 </configuration>
