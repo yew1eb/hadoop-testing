@@ -38,7 +38,7 @@ The supported components are listed below:
 | Hadoop YARN          | 3.4.2   | Yes             | No       | Yes             |                                        |
 | Hive Metastore       | 2.3.9   | Yes             | No       | Yes             |                                        |
 | HiveServer2          | 2.3.9   | Yes             | Yes      | Yes             | hive_server2_enabled                   |
-| Kyuubi               | 1.10.2  | Yes             | No       | Yes             |                                        |
+| Kyuubi               | 1.11.0  | Yes             | No       | Yes             |                                        |
 | Spark                | 4.0.1   | Yes             | Yes      | Yes             | spark_enabled, spark_custom_name       |
 | Spark Connect Server | 4.0.1   | Not Applicable  | Yes      | No              | spark_connect_server_enabled           |
 | Spark Thrift Server  | 4.0.1   | Yes             | Yes      | No              | spark_thrift_server_enabled            |
