@@ -31,7 +31,7 @@ hive_version: 2.3.9
 hive_server2_enabled: true
 hive_iceberg_version: 1.7.2
 
-zeppelin_enabled: true
+zeppelin_enabled: false
 zeppelin_version: 0.12.0
 zeppelin_custom_name: all
 
