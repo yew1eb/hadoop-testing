@@ -216,7 +216,7 @@ ansible-playbook build.yaml -e "{kerberos_enabled: true}"
 And some components are disabled by default, you can enable them by passing the `<component>_enabled` variable:
 
 ```bash
-ansible-playbook build.yaml -e "{jdk21_enabled: true, trino_enabled: true}"
+ansible-playbook build.yaml -e "{jdk25_enabled: true, trino_enabled: true}"
 ```
 
 Note: the whole variable list are defined in `host_vars/local.yaml`.
