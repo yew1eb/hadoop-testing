@@ -1,7 +1,7 @@
 #jinja2: trim_blocks: True, lstrip_blocks: True
 services:
   mysql:
-    image: bitnami/mysql:8.0
+    image: mysql:8.0
     hostname: mysql.orb.local
     container_name: mysql
     networks:
@@ -9,9 +9,11 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_AUTHENTICATION_PLUGIN=mysql_native_password
+      - MYSQL_DEFAULT_AUTHENTICATION_PLUGIN=mysql_native_password
       - MYSQL_DATABASE=metastore
     volumes:
     - ./mysql/files/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    - /var/lib/docker_mysql:/var/lib/mysql
     ports:
       - 3306:3306
 
@@ -34,6 +36,8 @@ services:
       - hadoop_net
     volumes:
       - share:/share
+      - /Users/yew1eb/workspaces/:/workspace/
+      - /Users/yew1eb/.m2/:/root/.m2/
     ports:
       - 8020:8020
       - 9083:9083
